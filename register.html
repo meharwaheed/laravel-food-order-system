@@ -55,7 +55,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>      
-                        <li class="nav-item"><a class="nav-link" href="index.html">Menu</a></li>      
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Menu</a></li>      
 
                         <li class="nav-item"><a class="nav-link" href="#">Master Food & Beverage </a></li>
                     </ul>
@@ -103,10 +103,10 @@
                                         <input type="email" id="email" placeholder="Email">
                                     </div>
                                     <div class="col-xl-12">
-                                        <input type="password" id="password" placeholder="Password">
+                                        <input type="text" id="password" placeholder="Password">
                                     </div>
                                     <div class="col-xl-12">
-                                        <input type="password" id="confirm_password" placeholder="Confirm Password">
+                                        <input type="text" id="confirm_password" placeholder="Confirm Password">
                                     </div>
                                     <div class="col-xl-12">
                                         <button type="submit" class="bttn-mid btn-fill w-100 create_account">Create my account</button>
@@ -164,10 +164,6 @@
           let password =  $("#password").val();
           let confirm_password =  $("#confirm_password").val();
           if(first_name != '' && last_name != '' && email != '' && password !='' && confirm_password != ''){
-            if(password != confirm_password){
-                alert("password confirmation dose not match");
-                return false;
-            }
             if(email){
                 var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                 regex.test(email);
@@ -175,6 +171,22 @@
                     alert("please enter valid email");
                     return false;
                 }
+            }
+            if(password.length < 8) {
+                alert("Password must be at least 8 characters")
+                return false;
+            }
+            if(password){
+                var regex =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[~!#$])[0-9a-zA-Z, ~!#$]{8,}$/;
+                    regex.test(password);
+                    if(!regex.test(password)){
+                        alert("Password must be at least 1 lower case letter, 1 uppercase letter, 1 number and one special character ~ ! $ #");
+                        return false;
+                    }
+            }
+            if(password != confirm_password){
+                alert("password confirmation dose not match");
+                return false;
             }
             alert("form submitted");
             return true;
