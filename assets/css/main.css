@@ -1,44 +1,4 @@
-/* ---------------------------------------
 
-[Main Stylesheet]
-
-Project:    	  Foodzza - Restaurant and Food Ordering HTML Template
-Version:    	  1.0
-Primary Use:      Restaurant and Food Ordering Website
-
-------------------------------------------
-
-[Table of contents]
-
-1. Fonts
-2. Reset Css
-3. Global Settings
-4. Section Styles
-5. Colors
-6. Margin and Padding
-7. Background Overlay
-8. Buttons Style
-9. Preloader
-10. ScrollUp Button
-11. Main Header style
-12. Hero Area
-13. Features Area
-14. Custom Hero
-15. Promo Area
-16. Our Partners
-
--------------------------------------------*/
-/*** 
-
-================
-	Fonts
-================
-
-
-font-family: 'Londrina Solid', cursive;
-font-family: 'Rubik', sans-serif;
-
- ***/
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&amp;family=Londrina+Solid&amp;display=swap");
 
 /*** 
